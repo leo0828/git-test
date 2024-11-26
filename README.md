@@ -1,5 +1,7 @@
 # git-test
 
+---
+
 ## git commit 提交规范
 
 feat：新功能（feature）
@@ -172,11 +174,18 @@ git branch -d release/1.0.0
 
 ### Rebase 使用注意事项
 
-    1.	避免对公共分支（如 main、dev）直接使用 rebase。
-    •	rebase 会重写提交历史，可能导致团队其他成员的分支与远程历史冲突。
-    2.	解决冲突时需谨慎：
-    •	在解决冲突后重新运行 git rebase --continue，确保变基操作完成。
-    3.	在多人协作时，推送变基后的分支时需要使用 --force：
-    •	例如：git push --force。
-    4.	保持本地和远程一致：
-    •	在完成 rebase 后，一定要确保远程分支的更新以避免冲突。
+1. 避免对公共分支（如 main、dev）直接使用 rebase。
+
+- rebase 会重写提交历史，可能导致团队其他成员的分支与远程历史冲突。
+
+2. 解决冲突时需谨慎：
+
+- 在解决冲突后重新运行 git rebase --continue，确保变基操作完成。
+
+3. 在多人协作时，推送变基后的分支时需要使用 --force：
+
+- 例如：git push --force。
+
+4. 保持本地和远程一致：
+
+- 在完成 rebase 后，一定要确保远程分支的更新以避免冲突。
